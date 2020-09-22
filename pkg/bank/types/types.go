@@ -24,10 +24,14 @@ type Card struct {
 	MinBalance	Money
 
 }
+//Category редставляет собой категорию, в который был совершен платеж (авто, аптеки, рестораны и т.д.).
+type Category string
 
+//Payment предяставляет информацию о платеже.
 type Payment struct {
 	ID		int
 	Amount	Money
+	Category	Category
 }
 
 type PaymentSource struct {
